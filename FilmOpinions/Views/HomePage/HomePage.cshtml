@@ -1,5 +1,51 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model FilmOpinions.Domain.ViewModels.HomePage_Model.HomePageModel;
+
 @{
+    ViewBag.Title = "Movie Opinions";
 }
+
+@section Style
+{
+    <link rel="stylesheet" href="/Content/CSS_Style/General_CSS_Style/Fonts_Style.css" />
+    <link rel="stylesheet" href="/Content/CSS_Style/General_CSS_Style/Button_Style.css" />
+    <link rel="stylesheet" href="/Content/CSS_Style/HomePage_Style/HomePage_Style.css" />
+}
+
+<div class="content-site">
+    <div class="content-site__photos content-site__photos--desktop">
+        <div class="content-site__photo-column--left">
+            <div class="content-site__photo-wrapper">
+                <div class="content-site__photo" style="background-image: url(@Model.PhotoSite[0].Photo_One);"></div>
+            </div>
+            <div class="content-site__photo-wrapper">
+                <div class="content-site__photo" style="background-image: url(@Model.PhotoSite[0].Photo_Two);"></div>
+            </div>
+        </div>
+        <div class="content-site__photo-column--right">
+            <div class="content-site__photo-wrapper">
+                <div class="content-site__photo" style="background-image: url(@Model.PhotoSite[0].Photo_Three);"></div>
+            </div>
+            <div class="content-site__photo-wrapper">
+                <div class="content-site__photo" style="background-image: url(@Model.PhotoSite[0].Photo_Four);"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content-site__text">
+        <div class="content-site__name">
+            <div class="content-site__name-part--first">
+                @Model.NameSite[0].FirstWord
+            </div>
+            <div class="content-site__name-part--second">
+                @Model.NameSite[0].SecondWord
+            </div>
+        </div>
+        <div class="content-site__description">
+            <div class="description-container--text">
+                @Model.DescriptionText
+            </div>
+        </div>
+        <div class="content-site__button">
+            <button class="button" onclick="location.href='@Url.Action("RedirectToLoginPage", "HomePage")'">Увійти</button>
+        </div>
+    </div>
+</div>

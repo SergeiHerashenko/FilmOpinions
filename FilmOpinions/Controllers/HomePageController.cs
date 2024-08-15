@@ -10,5 +10,12 @@ namespace FilmOpinions.Controllers
             HomePageModel model = new HomePageModel();
             return View(model);
         }
+
+        // Перенаправлення на сторінку входу / Redirect to the login page
+        [HttpPost]
+        public IActionResult RedirectToLoginPage()
+        {
+            return RedirectToAction("LoginPage", "LoginPage");
+        }
     }
 }
