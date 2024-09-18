@@ -1,16 +1,86 @@
-﻿/* CSS стилі для екранів з шириною не менше 1300px /CSS styles for screens with a width of at least 1300px/ */
+﻿/* Стиль для контенту сайта /Style for site content/ */
+.content-site {
+    display: grid; /* Встановлює властивість grid для використання CSS Grid Layout /Sets the grid property to use CSS Grid Layout/ */
+    height: calc(100vh - 80px); /* Віднімаємо 80px (2 * 40px) від 100% висоти екрану /Subtract 80px (2 * 40px) from 100% of the screen height/ */
+    margin-top: 40px; /* Встановлюємо відступ зверху в 40px /Set the indent from the top to 40px/ */
+    margin-bottom: 40px; /* Встановлюємо відступ знизу в 40px /We set the indent from the bottom to 40px/ */
+    margin-left: auto; /* Вирівнюємо лівий відступ по центру /Align the left margin to the center/ */
+    margin-right: auto; /* Вирівнюємо правий відступ по центру /Align the right margin to the center/ */
+}
+
+/* Стиль для тексту назви сайту /Style for site title text/ */
+.content-site__name {
+    display: grid; /* Встановлює властивість grid для використання CSS Grid Layout /Sets the grid property to use CSS Grid Layout/ */
+    grid-template-rows: 1fr 1fr; /* Встановлює два рядки рівної висоти / Sets two rows of equal height */
+}
+
+/* Стиль для першого слова назви сайту /Style for the first word of the site name/ */
+.content-site__name-part--first {
+    font-family: 'Akronim'; /* Встановлює шрифт для тексту /Sets the font for the text/ */
+    color: #FF8304; /* Встановлює колір тексту /Sets the text color/ */
+    margin-left: 10%; /* Встановлює лівий відступ відносно блоку-батька /Sets the left margin relative to the parent block/ */
+}
+
+/* Стиль для другого слова назви сайту /Style for the second word of the site name/ */
+.content-site__name-part--second {
+    font-family: 'Akronim'; /* Встановлює шрифт для тексту /Sets the font for the text/ */
+    color: #FF8304; /* Встановлює колір тексту /Sets the text color/ */
+    margin-left: 14%; /* Встановлює лівий відступ відносно блоку-батька /Sets the left margin relative to the parent block/ */
+}
+
+/* Стилі для контейнера з текстовим описом /Styles for container with text description/ */
+.content-site__description {
+    display: inline-flex; /* Встановлюємо flex для використання контейнера flex /Set flex property for using a flex container/ */
+    padding: 10px; /* Зовнішній відступ від тексту до рамки, 10px від висоти вікна перегляду /External margin from text to the border/ */
+    flex-direction: column; /* Встановлюємо напрямок відображення дочірніх елементів у стовпчик /Set the direction of displaying child elements in a column/ */
+    justify-content: center; /* Вирівнюємо елементи по центру по вертикалі /Align elements to the center vertically/ */
+    align-items: center; /* Вирівнюємо елементи по центру по горизонталі /Align elements to the center horizontally/ */
+    border-radius: 2vw; /* Радіус закруглення кутів, 2% від висоти вікна перегляду /Corner radius, 2% of the viewport height/ */
+    border: 0.2vw solid rgba(51, 51, 51, 0.50); /* Тонка рамка, 0.2% ширини вікна перегляду /Thin border, 0.2% of the viewport width/ */
+    background: #333; /* Колір фону /Background color/ */
+    height: 32vh; /* Висота контейнера /Height of the container/ */
+    margin-left: 5%; /* Встановлює лівий відступ відносно блоку-батька /Sets the left margin relative to the parent block/ */
+    margin-right: 5%; /* Встановлює правий відступ відносно блоку-батька /Sets the right indent relative to the parent block/ */
+    box-shadow: -1.2vw -1.2vw 2.4vw 0px #3E3E3E, -1.2vw -1.2vw 2.4vw 0px rgba(62, 62, 62, 0.25) inset; /* Тінь блока, задана в відносних одиницях /Shadow of the block, specified in relative units/ */
+}
+
+/* Стилі для блока текстового опису /Styles for the text description block/ */
+.description-container--text {
+    color: rgba(255, 245, 234, 0.80); /* Колір тексту /Text color/ */
+    font-family: 'Spartan'; /* Використовуваний шрифт /Used font/ */
+    border-radius: calc(2vw - 10px); /* Радіус закруглення кутів, 2% від ширини/висоти елемента /Corner radius, 2% of the width/height of the element/ */
+    border: 3px solid rgba(51, 51, 51, 0.50); /* Товста рамка, 3px ширини, 0.5% прозорості /Thick border, 3px width, 0.5% transparency/ */
+    background: #333; /* Колір фону /Background color/ */
+    display: flex; /* Використання flex для текстового опису /Using flex for text description/ */
+    padding: 1vw; /* Внутрішній відступ, 1% ширини вікна перегляду /Internal margin, 1% of the viewport width/ */
+    flex-direction: column; /* Напрямок відображення дочірніх елементів - стовпчик /Direction of displaying child elements - column/ */
+    align-items: center; /* Вирівнюємо елементи по центру по горизонталі /Align elements to the center horizontally/ */
+    justify-content: center; /* Вирівнюємо елементи по центру по вертикалі /Align elements to the center vertically/ */
+    box-shadow: -1.2vw -1.2vw 2.4vw 0px #3E3E3E, -1.2vw -1.2vw 2.4vw 0px rgba(62, 62, 62, 0.25) inset; /* Тінь блоку /Block shadow/ */
+    height: 100%; /* Висота елемента /Element height/ */
+    font-size: 2.5vh; /* Розмір шрифта /Font size/ */
+}
+
+/* Стилі для контейнера кнопки логіну / Styles for the login button container */
+.content-site__button {
+    display: flex; /* Встановлює властивість flex для використання flex-контейнера / Sets the flex property to use a flex container */
+    justify-content: center; /* Вирівнюємо елементи по центру по горизонталі / Align elements to the center horizontally */
+    text-align: center; /* Вирівнюємо текст по центру / Align text to the center */
+}
+
+    /* Стиль кнопки для входу /Login button style/ */
+    .content-site__button button {
+        width: 230px; /* Ширина кнопки встановлена на 230 пікселів /Button width is set to 230 pixels/ */
+        height: 50px; /* Висота кнопки встановлена на 50 пікселів /Button height is set to 50 pixels/ */
+    }
+
+/* CSS стилі для екранів з шириною не менше 1300px /CSS styles for screens with a width of at least 1300px/ */
 @media (min-width: 1300px){
 
     /* Стиль для контенту сайта /Style for site content/ */
     .content-site {
-        display: grid; /* Встановлює властивість grid для використання CSS Grid Layout /Sets the grid property to use CSS Grid Layout/ */
         grid-template-columns: repeat(2, 1fr); /* Встановлює дві колонки рівної ширини /Sets two columns of equal width/ */
         max-width: 1300px; /* Максимальна ширина контенту сайту /Maximum width of site content/ */
-        height: calc(100vh - 80px); /* Віднімаємо 80px (2 * 40px) від 100% висоти екрану /Subtract 80px (2 * 40px) from 100% of the screen height/ */
-        margin-top: 40px; /* Встановлюємо відступ зверху в 40px /Set the indent from the top to 40px/ */
-        margin-bottom: 40px; /* Встановлюємо відступ знизу в 40px /We set the indent from the bottom to 40px/ */
-        margin-left: auto; /* Вирівнюємо лівий відступ по центру /Align the left margin to the center/ */
-        margin-right: auto; /* Вирівнюємо правий відступ по центру /Align the right margin to the center/ */
     }
 
     /* Стиль для секції фотографій /Style for the photo section/ */
@@ -72,72 +142,83 @@
         grid-template-rows: 3fr 3fr 1fr; /* Встановлює два рядки з різною висотою / Sets two rows with different heights */
     }
 
-    /* Стиль для тексту назви сайту /Style for site title text/ */
-    .content-site__name {
-        display: grid; /* Встановлює властивість grid для використання CSS Grid Layout /Sets the grid property to use CSS Grid Layout/ */
-        grid-template-rows: 1fr 1fr; /* Встановлює два рядки рівної висоти / Sets two rows of equal height */
-    }
-
     /* Стиль для першого слова назви сайту /Style for the first word of the site name/ */
     .content-site__name-part--first {
-        font-family: 'Akronim'; /* Встановлює шрифт для тексту /Sets the font for the text/ */
-        color: #FF8304; /* Встановлює колір тексту /Sets the text color/ */
         font-size: 13vh; /* Розмір шрифта у висоті видимого вікна /Font size in terms of the visible window height/ */
-        margin-left: 10%; /* Встановлює лівий відступ відносно блоку-батька /Sets the left margin relative to the parent block/ */
     }
 
     /* Стиль для другого слова назви сайту /Style for the second word of the site name/ */
     .content-site__name-part--second {
-        font-family: 'Akronim'; /* Встановлює шрифт для тексту /Sets the font for the text/ */
-        color: #FF8304; /* Встановлює колір тексту /Sets the text color/ */
         font-size: 13vh; /* Розмір шрифта у висоті видимого вікна /Font size in terms of the visible window height/ */
-        margin-left: 14%; /* Встановлює лівий відступ відносно блоку-батька /Sets the left margin relative to the parent block/ */
+    }
+}
+
+/* CSS стилі для екранів з шириною не більше 1299px /CSS styles for screens with a width of no more than 1299px/ */
+@media (max-width: 1299px){
+
+    /* Стиль для контенту сайта /Style for site content/ */
+    .content-site {
+        grid-template-columns: 1fr; /* Встановлює дві колонки рівної ширини /Sets two columns of equal width/ */
+        max-width: 1100px; /* Максимальна ширина контенту сайту /Maximum width of site content/ */
     }
 
-    /* Стилі для контейнера з текстовим описом /Styles for container with text description/ */
+    .content-site__photos--desktop {
+        display: none; /* Приховує елемент / Hides the element */
+    }
+
+    .content-site__text {
+        display: grid; /* Встановлює властивість grid для використання CSS Grid Layout /Sets the grid property to use CSS Grid Layout/ */
+        grid-template-rows: 2fr 3fr 2fr; /* Встановлює два рядки з різною висотою / Sets two rows with different heights */
+    }
+
+    /* Стиль для першого слова назви сайту /Style for the first word of the site name/ */
+    .content-site__name-part--first {
+        font-size: 11vh; /* Розмір шрифта у висоті видимого вікна /Font size in terms of the visible window height/ */
+        text-align: center; /* Вирівнювання тексту по центру /Centers the text horizontally/ */
+        margin-left: 0; /* Відсутність відступу зліва /No left margin/ */
+    }
+
+    /* Стиль для другого слова назви сайту /Style for the second word of the site name/ */
+    .content-site__name-part--second {
+        font-size: 11vh; /* Розмір шрифта у висоті видимого вікна /Font size in terms of the visible window height/ */
+        text-align: center; /* Вирівнювання тексту по центру /Centers the text horizontally/ */
+    }
+
     .content-site__description {
-        display: inline-flex; /* Встановлюємо flex для використання контейнера flex /Set flex property for using a flex container/ */
-        padding: 10px; /* Зовнішній відступ від тексту до рамки, 10px від висоти вікна перегляду /External margin from text to the border/ */
-        flex-direction: column; /* Встановлюємо напрямок відображення дочірніх елементів у стовпчик /Set the direction of displaying child elements in a column/ */
-        justify-content: center; /* Вирівнюємо елементи по центру по вертикалі /Align elements to the center vertically/ */
-        align-items: center; /* Вирівнюємо елементи по центру по горизонталі /Align elements to the center horizontally/ */
-        border-radius: 2vw; /* Радіус закруглення кутів, 2% від висоти вікна перегляду /Corner radius, 2% of the viewport height/ */
-        border: 0.2vw solid rgba(51, 51, 51, 0.50); /* Тонка рамка, 0.2% ширини вікна перегляду /Thin border, 0.2% of the viewport width/ */
-        background: #333; /* Колір фону /Background color/ */
-        height: 32vh; /* Висота контейнера /Height of the container/ */
-        margin-left: 5%; /* Встановлює лівий відступ відносно блоку-батька /Sets the left margin relative to the parent block/ */
-        margin-right: 5%; /* Встановлює правий відступ відносно блоку-батька /Sets the right indent relative to the parent block/ */
-        box-shadow: -1.2vw -1.2vw 2.4vw 0px #3E3E3E, -1.2vw -1.2vw 2.4vw 0px rgba(62, 62, 62, 0.25) inset; /* Тінь блока, задана в відносних одиницях /Shadow of the block, specified in relative units/ */
+        margin: auto; /* Автоматичне вирівнювання блоку по горизонталі /Auto centers the block horizontally/ */
+        margin-right: 5%; /* Відступ справа у 5% від ширини вікна /5% margin on the right from the viewport width/ */
+        margin-left: 5%; /* Відступ зліва у 5% від ширини вікна /5% margin on the left from the viewport width/ */
+    }
+}
+
+/* CSS для пристроїв з шириною екрана не більше 480 пікселів /CSS for devices with a screen width of 480 pixels or less/ */
+@media (max-width: 480px) {
+
+    /* Стилі для блока текстового опису /Styles for the text description block/ */
+    .description-container--text {
+        font-size: 2vh; /* Розмір шрифту залежить від ширини видимого вікна браузера (1 vw = 1% від ширини вікна) /Font size depends on the viewport width (1 vw = 1% of the browser window width)/ */
+    }
+}
+
+/* CSS стилі для перевернутої оріентації екранів /CSS styles for inverted screen orientation/ */
+@media (orientation: landscape) {
+
+    /* Стиль кнопки для входу /Login button style/ */
+    .content-site__button button {
+        font-size: 2vw; /* Розмір шрифту залежить від ширини видимого вікна браузера (1 vw = 1% від ширини вікна) /Font size depends on the viewport width (1 vw = 1% of the browser window width)/ */
+        width: 130px; /* Ширина кнопки встановлена на 130 пікселів /Button width is set to 130 pixels/ */
+        height: 50px; /* Висота кнопки встановлена на 50 пікселів /Button height is set to 50 pixels/ */
     }
 
     /* Стилі для блока текстового опису /Styles for the text description block/ */
     .description-container--text {
-        color: rgba(255, 245, 234, 0.80); /* Колір тексту /Text color/ */
-        font-family: 'Spartan'; /* Використовуваний шрифт /Used font/ */
-        border-radius: calc(2vw - 10px); /* Радіус закруглення кутів, 2% від ширини/висоти елемента /Corner radius, 2% of the width/height of the element/ */
-        border: 3px solid rgba(51, 51, 51, 0.50); /* Товста рамка, 3px ширини, 0.5% прозорості /Thick border, 3px width, 0.5% transparency/ */
-        background: #333; /* Колір фону /Background color/ */
-        display: flex; /* Використання flex для текстового опису /Using flex for text description/ */
-        padding: 1vw; /* Внутрішній відступ, 1% ширини вікна перегляду /Internal margin, 1% of the viewport width/ */
-        flex-direction: column; /* Напрямок відображення дочірніх елементів - стовпчик /Direction of displaying child elements - column/ */
-        align-items: center; /* Вирівнюємо елементи по центру по горизонталі /Align elements to the center horizontally/ */
-        justify-content: center; /* Вирівнюємо елементи по центру по вертикалі /Align elements to the center vertically/ */
-        box-shadow: -1.2vw -1.2vw 2.4vw 0px #3E3E3E, -1.2vw -1.2vw 2.4vw 0px rgba(62, 62, 62, 0.25) inset; /* Тінь блоку /Block shadow/ */
-        height: 100%; /* Висота елемента /Element height/ */
-        font-size: 2.5vh; /* Розмір шрифта /Font size/ */
+        font-size: 2vw; /* Розмір шрифту залежить від ширини видимого вікна браузера (1 vw = 1% від ширини вікна) /Font size depends on the viewport width (1 vw = 1% of the browser window width)/ */
     }
 
-    /* Стилі для контейнера кнопки логіну / Styles for the login button container */
-    .content-site__button {
-        display: flex; /* Встановлює властивість flex для використання flex-контейнера / Sets the flex property to use a flex container */
-        justify-content: center; /* Вирівнюємо елементи по центру по горизонталі / Align elements to the center horizontally */
-        align-items: center; /* Вирівнюємо елементи по центру по вертикалі / Align elements to the center vertically */
-        text-align: center; /* Вирівнюємо текст по центру / Align text to the center */
+    /* Стиль для контенту сайту /Style for site content/ */
+    .content-site {
+        margin-top: 0; /* Відсутність відступу зверху /No top margin/ */
+        margin-bottom: 0; /* Відсутність відступу знизу /No bottom margin/ */
+        height: 100vh; /* Висота блоку займає 100% від висоти видимого вікна браузера /Height of the block occupies 100% of the viewport height/ */
     }
-
-        /* Стиль кнопки для входу /Login button style/ */
-        .content-site__button button {
-            width: 230px;
-            height: 50px;
-        }
 }
